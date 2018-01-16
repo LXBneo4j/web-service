@@ -2,17 +2,14 @@ package com.self.study.util;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.parser.Feature;
 import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
 import com.google.i18n.phonenumbers.geocoding.PhoneNumberOfflineGeocoder;
 
 import com.self.study.enums.AliyunRequestTypeEnum;
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 
-import javax.print.attribute.standard.Copies;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Locale;
@@ -82,8 +79,8 @@ public class AddressUtil {
      *
      * @return
      */
-    public static AliyunAddress getAddByLatitudeAndLongitude(Map<String,String> map){
-        AliyunAddress j_2=null;
+    public static AliyunAddressDO getAddByLatitudeAndLongitude(Map<String,String> map){
+        AliyunAddressDO j_2=null;
         String urlString = change(url,map);
         String res = "";
         try {
@@ -101,7 +98,7 @@ public class AddressUtil {
             System.out.println(res);
             JSONObject jsonObject = JSONObject.parseObject (res);
             JSONArray jsonArray = JSONArray.parseArray (jsonObject.getString("addrList"));
-            j_2 = JSONObject.parseObject (jsonArray.get(0).toString (),AliyunAddress.class);
+            j_2 = JSONObject.parseObject (jsonArray.get(0).toString (),AliyunAddressDO.class);
 
             Map<String,String> resultMap = new HashMap<String, String>();
             String allAdd = j_2.getAdmName();

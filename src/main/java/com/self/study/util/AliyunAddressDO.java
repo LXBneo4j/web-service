@@ -9,7 +9,7 @@ import java.util.Map;
  * @gmail: liuxiaobo170601@gmail.com
  * @extend： 目标：
  */
-public class AliyunAddress implements Serializable {
+public class AliyunAddressDO implements Serializable {
     private String type;
     private String status;
     private String name;
