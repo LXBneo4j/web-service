@@ -87,6 +87,13 @@
       <version>1.2.44</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20171018</version>
+    </dependency>
+
 
     <!-- HTTP -->
     <dependency>
@@ -94,6 +101,14 @@
       <artifactId>okhttp</artifactId>
       <version>3.4.1</version>
     </dependency>
+
+
+    <dependency>
+      <groupId>com.baidu.aip</groupId>
+      <artifactId>java-sdk</artifactId>
+      <version>4.1.0</version>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>web-service</finalName>

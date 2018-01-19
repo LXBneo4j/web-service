@@ -11,3 +11,5 @@ WSDL:(Web Services Description Language) WSDL 文件是一个 XML 文档，用�
 创建客户端：
   创建一个client11客户端的项目，然后我们通过Win+R组合键调出cmd,在cmd中输入wsimport -s 我们这个项目的src路径 -keep 我们发布的webservice地址
   
+
+1、百度通用翻译开放平台：
